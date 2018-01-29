@@ -7,15 +7,31 @@
 //
 
 #import "ToptweetsTableViewController.h"
+#import "UserDetails.h"
+#import "TweetsCell.h"
+#import "TweetsNetworkServices.h"
+#import "HashTagTCell.h"
+#import "CreateAPIString.h"
+#import "TweetsTableViewController.h"
+
 
 @interface ToptweetsTableViewController ()
+
+@property(nonatomic, strong) UILabel *hashtgasLabel;
+@property(nonatomic, strong) NSArray *hashtagsArray;
+@property(nonatomic, strong) NSURLSessionDataTask *sessionData;
 
 @end
 
 @implementation ToptweetsTableViewController
 
+static NSString * const reuseIdentifier = @"HashTagTCell";
+
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+     [self fetchHashTags];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -23,6 +39,37 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
+
+
+-(void)fetchHashTags {
+    NSString *baseUrl = [NSString stringWithFormat:@"%@",[CreateAPIString returnTrendsURL]];
+    NSURLRequest * request = [TweetsNetworkServices createGetRequestWithBaseUrl:baseUrl andParamString:@""];
+    self.sessionData = [TweetsNetworkServices dataTaskWithRequest:request completionHandler:^(NSData *jsonData, NSURLResponse *response, NSError *error)
+                        {
+                            dispatch_async(dispatch_get_main_queue(), ^{
+                            });
+                            if(error)
+                            {
+                                dispatch_async(dispatch_get_main_queue(), ^{
+                                    // Handle error
+                                    
+                                });
+                            }
+                            else
+                            {
+                                NSDictionary* json = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                                                     options:kNilOptions
+                                                                                       error:&error];
+                                _hashtagsArray  = [[NSArray alloc] initWithObjects:json[@"trends"], nil];
+                                
+                                NSLog(@"%@", json);
+                                
+                            }
+                            
+                        }];
+}
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -32,24 +79,37 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    if (_hashtagsArray.count >1 ) {
+        return  _hashtagsArray.count;
+    }
+    
+    return 1;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    HashTagTCell *cell =  (HashTagTCell *)[tableView dequeueReusableCellWithIdentifier:@"HashTagTCell"];
+    
     
     // Configure the cell...
     
+    cell.delegate= self;
+    
+    if (!cell) {
+        
+        cell  =  [HashTagTCell loadFromNib];
+        
+    }
+    
+    cell.model = [self.hashtagsArray objectAtIndex:indexPath.row];
+    
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.

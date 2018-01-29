@@ -19,31 +19,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        [self loginButtonAction:self];
+//        [self loginButtonAction:self];
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (IBAction)loginButtonAction:(id)sender {
-    
-    //    NSString *userID = [Twitter sharedInstance].sessionStore.session.userID;
-    //    TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:userID];
-    
-    TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
-        if (session) {
-            
-            NSLog(@"signed in as %@", [session userName]);
-           // [self navigateToMyNewViewController];
-        } else {
-            NSLog(@"error: %@", [error localizedDescription]);
-        }
-    }];
-    logInButton.center = self.view.center;
-    [self.view addSubview:logInButton];
 }
 
 

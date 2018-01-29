@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "HashTagTCell.h"
 
-@interface ToptweetsTableViewController : UITableViewController
+
+@interface ToptweetsTableViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+
 
 @end

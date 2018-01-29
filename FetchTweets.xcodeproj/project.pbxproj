@@ -18,10 +18,22 @@
 		C9138158201314AE0062B6A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9138157201314AE0062B6A5 /* main.m */; };
 		C9138162201314AF0062B6A5 /* FetchTweetsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9138161201314AF0062B6A5 /* FetchTweetsTests.m */; };
 		C913816D201314AF0062B6A5 /* FetchTweetsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C913816C201314AF0062B6A5 /* FetchTweetsUITests.m */; };
+		C9364658201EC29300459509 /* TweetsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = C9364657201EC29300459509 /* TweetsModel.m */; };
+		C95580B8201EC394004780C8 /* NSDictionary+NullCheck.m in Sources */ = {isa = PBXBuildFile; fileRef = C95580B7201EC394004780C8 /* NSDictionary+NullCheck.m */; };
+		C95580BC201EC401004780C8 /* TweetsNetworkServices.m in Sources */ = {isa = PBXBuildFile; fileRef = C95580BB201EC401004780C8 /* TweetsNetworkServices.m */; };
+		C95580BF201EC450004780C8 /* CreateAPIString.m in Sources */ = {isa = PBXBuildFile; fileRef = C95580BE201EC450004780C8 /* CreateAPIString.m */; };
+		C95580C6201EC7A0004780C8 /* UserDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = C95580C5201EC7A0004780C8 /* UserDetails.m */; };
+		C95580CC201ECFE8004780C8 /* TweetsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C95580CA201ECFE8004780C8 /* TweetsCell.m */; };
+		C95580CD201ECFE8004780C8 /* TweetsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95580CB201ECFE8004780C8 /* TweetsCell.xib */; };
+		C95580D1201ED8C8004780C8 /* HashTagTCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C95580CF201ED8C8004780C8 /* HashTagTCell.m */; };
+		C95580D2201ED8C8004780C8 /* HashTagTCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C95580D0201ED8C8004780C8 /* HashTagTCell.xib */; };
 		C982E355201322FC00A5E44E /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C982E354201322FC00A5E44E /* SafariServices.framework */; };
 		C982E3662013401A00A5E44E /* TweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C982E3652013401A00A5E44E /* TweetsTableViewController.m */; };
 		C982E3692013407F00A5E44E /* ToptweetsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C982E3682013407F00A5E44E /* ToptweetsTableViewController.m */; };
 		C982E36C2013520B00A5E44E /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C982E36B2013520B00A5E44E /* HomeViewController.m */; };
+		C9AFCECE201DF348000DEB96 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFCECD201DF348000DEB96 /* Accounts.framework */; };
+		C9AFCED0201DF34E000DEB96 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFCECF201DF34E000DEB96 /* Social.framework */; };
+		C9AFCED2201DF353000DEB96 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9AFCED1201DF353000DEB96 /* Security.framework */; };
 		D1ED1E421FB564D6478F1A87 /* Pods_FetchTweetsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 523F6AFF1A2F13B6D5310B62 /* Pods_FetchTweetsTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +81,22 @@
 		C913816C201314AF0062B6A5 /* FetchTweetsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FetchTweetsUITests.m; sourceTree = "<group>"; };
 		C913816E201314AF0062B6A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C913817A201316CE0062B6A5 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		C9364656201EC29300459509 /* TweetsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetsModel.h; sourceTree = "<group>"; };
+		C9364657201EC29300459509 /* TweetsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetsModel.m; sourceTree = "<group>"; };
+		C95580B6201EC394004780C8 /* NSDictionary+NullCheck.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+NullCheck.h"; sourceTree = "<group>"; };
+		C95580B7201EC394004780C8 /* NSDictionary+NullCheck.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+NullCheck.m"; sourceTree = "<group>"; };
+		C95580BA201EC401004780C8 /* TweetsNetworkServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetsNetworkServices.h; sourceTree = "<group>"; };
+		C95580BB201EC401004780C8 /* TweetsNetworkServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetsNetworkServices.m; sourceTree = "<group>"; };
+		C95580BD201EC450004780C8 /* CreateAPIString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateAPIString.h; sourceTree = "<group>"; };
+		C95580BE201EC450004780C8 /* CreateAPIString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateAPIString.m; sourceTree = "<group>"; };
+		C95580C4201EC7A0004780C8 /* UserDetails.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserDetails.h; sourceTree = "<group>"; };
+		C95580C5201EC7A0004780C8 /* UserDetails.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserDetails.m; sourceTree = "<group>"; };
+		C95580C9201ECFE8004780C8 /* TweetsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetsCell.h; sourceTree = "<group>"; };
+		C95580CA201ECFE8004780C8 /* TweetsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetsCell.m; sourceTree = "<group>"; };
+		C95580CB201ECFE8004780C8 /* TweetsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TweetsCell.xib; sourceTree = "<group>"; };
+		C95580CE201ED8C8004780C8 /* HashTagTCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HashTagTCell.h; sourceTree = "<group>"; };
+		C95580CF201ED8C8004780C8 /* HashTagTCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HashTagTCell.m; sourceTree = "<group>"; };
+		C95580D0201ED8C8004780C8 /* HashTagTCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HashTagTCell.xib; sourceTree = "<group>"; };
 		C982E354201322FC00A5E44E /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 		C982E3642013401A00A5E44E /* TweetsTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TweetsTableViewController.h; sourceTree = "<group>"; };
 		C982E3652013401A00A5E44E /* TweetsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TweetsTableViewController.m; sourceTree = "<group>"; };
@@ -76,6 +104,9 @@
 		C982E3682013407F00A5E44E /* ToptweetsTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToptweetsTableViewController.m; sourceTree = "<group>"; };
 		C982E36A2013520B00A5E44E /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		C982E36B2013520B00A5E44E /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		C9AFCECD201DF348000DEB96 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		C9AFCECF201DF34E000DEB96 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		C9AFCED1201DF353000DEB96 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		F641209D033D1E81BF303207 /* Pods-FetchTweets.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FetchTweets.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FetchTweets/Pods-FetchTweets.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +115,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9AFCED2201DF353000DEB96 /* Security.framework in Frameworks */,
+				C9AFCED0201DF34E000DEB96 /* Social.framework in Frameworks */,
+				C9AFCECE201DF348000DEB96 /* Accounts.framework in Frameworks */,
 				C982E355201322FC00A5E44E /* SafariServices.framework in Frameworks */,
 				B4D225F39AD5AC42485C31E2 /* Pods_FetchTweets.framework in Frameworks */,
 			);
@@ -124,6 +158,9 @@
 		AF107E9C5D2F3D463D9F5742 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9AFCED1201DF353000DEB96 /* Security.framework */,
+				C9AFCECF201DF34E000DEB96 /* Social.framework */,
+				C9AFCECD201DF348000DEB96 /* Accounts.framework */,
 				C982E354201322FC00A5E44E /* SafariServices.framework */,
 				C913817A201316CE0062B6A5 /* Twitter.framework */,
 				8EAC374A854647B81128C30C /* Pods_FetchTweets.framework */,
@@ -158,12 +195,13 @@
 		C9138144201314AE0062B6A5 /* FetchTweets */ = {
 			isa = PBXGroup;
 			children = (
+				C95580C8201ECFAD004780C8 /* CustomCells */,
+				C95580C7201ECC25004780C8 /* Application Delegate */,
+				C95580B9201EC3DC004780C8 /* NetWorkServices */,
+				C95580B5201EC379004780C8 /* Categories */,
 				C982E3632013392300A5E44E /* Storyboards */,
-				C982E3622013390600A5E44E /* Routers */,
 				C982E361201338F300A5E44E /* Presenters */,
 				C982E360201338ED00A5E44E /* Models */,
-				C9138145201314AE0062B6A5 /* AppDelegate.h */,
-				C9138146201314AE0062B6A5 /* AppDelegate.m */,
 				C9138151201314AE0062B6A5 /* Assets.xcassets */,
 				C9138153201314AE0062B6A5 /* LaunchScreen.storyboard */,
 				C9138156201314AE0062B6A5 /* Info.plist */,
@@ -191,9 +229,55 @@
 			path = FetchTweetsUITests;
 			sourceTree = "<group>";
 		};
+		C95580B5201EC379004780C8 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				C95580B6201EC394004780C8 /* NSDictionary+NullCheck.h */,
+				C95580B7201EC394004780C8 /* NSDictionary+NullCheck.m */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		C95580B9201EC3DC004780C8 /* NetWorkServices */ = {
+			isa = PBXGroup;
+			children = (
+				C95580BA201EC401004780C8 /* TweetsNetworkServices.h */,
+				C95580BB201EC401004780C8 /* TweetsNetworkServices.m */,
+				C95580BD201EC450004780C8 /* CreateAPIString.h */,
+				C95580BE201EC450004780C8 /* CreateAPIString.m */,
+			);
+			path = NetWorkServices;
+			sourceTree = "<group>";
+		};
+		C95580C7201ECC25004780C8 /* Application Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				C9138145201314AE0062B6A5 /* AppDelegate.h */,
+				C9138146201314AE0062B6A5 /* AppDelegate.m */,
+			);
+			path = "Application Delegate";
+			sourceTree = "<group>";
+		};
+		C95580C8201ECFAD004780C8 /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				C95580C9201ECFE8004780C8 /* TweetsCell.h */,
+				C95580CA201ECFE8004780C8 /* TweetsCell.m */,
+				C95580CB201ECFE8004780C8 /* TweetsCell.xib */,
+				C95580CE201ED8C8004780C8 /* HashTagTCell.h */,
+				C95580CF201ED8C8004780C8 /* HashTagTCell.m */,
+				C95580D0201ED8C8004780C8 /* HashTagTCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
 		C982E360201338ED00A5E44E /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C9364656201EC29300459509 /* TweetsModel.h */,
+				C9364657201EC29300459509 /* TweetsModel.m */,
+				C95580C4201EC7A0004780C8 /* UserDetails.h */,
+				C95580C5201EC7A0004780C8 /* UserDetails.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -211,13 +295,6 @@
 				C982E36B2013520B00A5E44E /* HomeViewController.m */,
 			);
 			path = Presenters;
-			sourceTree = "<group>";
-		};
-		C982E3622013390600A5E44E /* Routers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Routers;
 			sourceTree = "<group>";
 		};
 		C982E3632013392300A5E44E /* Storyboards */ = {
@@ -345,7 +422,9 @@
 			files = (
 				C9138155201314AE0062B6A5 /* LaunchScreen.storyboard in Resources */,
 				C9138152201314AE0062B6A5 /* Assets.xcassets in Resources */,
+				C95580D2201ED8C8004780C8 /* HashTagTCell.xib in Resources */,
 				C913814D201314AE0062B6A5 /* Main.storyboard in Resources */,
+				C95580CD201ECFE8004780C8 /* TweetsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -510,9 +589,16 @@
 			files = (
 				C9138150201314AE0062B6A5 /* FetchTweets.xcdatamodeld in Sources */,
 				C982E3692013407F00A5E44E /* ToptweetsTableViewController.m in Sources */,
+				C95580B8201EC394004780C8 /* NSDictionary+NullCheck.m in Sources */,
 				C913814A201314AE0062B6A5 /* ViewController.m in Sources */,
+				C95580BC201EC401004780C8 /* TweetsNetworkServices.m in Sources */,
 				C982E3662013401A00A5E44E /* TweetsTableViewController.m in Sources */,
 				C9138158201314AE0062B6A5 /* main.m in Sources */,
+				C9364658201EC29300459509 /* TweetsModel.m in Sources */,
+				C95580BF201EC450004780C8 /* CreateAPIString.m in Sources */,
+				C95580D1201ED8C8004780C8 /* HashTagTCell.m in Sources */,
+				C95580C6201EC7A0004780C8 /* UserDetails.m in Sources */,
+				C95580CC201ECFE8004780C8 /* TweetsCell.m in Sources */,
 				C982E36C2013520B00A5E44E /* HomeViewController.m in Sources */,
 				C9138147201314AE0062B6A5 /* AppDelegate.m in Sources */,
 			);

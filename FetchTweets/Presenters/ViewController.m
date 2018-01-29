@@ -19,7 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    [self loginButtonAction:self];
+ [self loginButtonAction];
+    
 }
 
 
@@ -29,16 +30,15 @@
 }
 
 
-- (IBAction)loginButtonAction:(id)sender {
+- (void)loginButtonAction {
     
-//    NSString *userID = [Twitter sharedInstance].sessionStore.session.userID;
-//    TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:userID];
+    //    NSString *userID = [Twitter sharedInstance].sessionStore.session.userID;
+    //    TWTRAPIClient *client = [[TWTRAPIClient alloc] initWithUserID:userID];
     
     TWTRLogInButton *logInButton = [TWTRLogInButton buttonWithLogInCompletion:^(TWTRSession *session, NSError *error) {
         if (session) {
-            
             NSLog(@"signed in as %@", [session userName]);
-           // [self navigateToMyNewViewController];
+            // [self navigateToMyNewViewController];
         } else {
             NSLog(@"error: %@", [error localizedDescription]);
         }
@@ -46,7 +46,6 @@
     logInButton.center = self.view.center;
     [self.view addSubview:logInButton];
 }
-
 - (void)navigateToMyNewViewController {
     
 //    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
