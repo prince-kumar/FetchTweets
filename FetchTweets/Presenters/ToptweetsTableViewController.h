@@ -8,9 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "HashTagTCell.h"
+#import <TwitterKit/TWTRKit.h>
 
 
-@interface ToptweetsTableViewController : UITableViewController<UITableViewDataSource, UITableViewDelegate>
+
+@interface ToptweetsTableViewController : TWTRTimelineViewController
+
+@property(nonatomic,strong) NSString *hashtag;
 
 
 @end

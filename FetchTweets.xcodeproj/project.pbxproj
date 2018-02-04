@@ -8,9 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2CD14F582609F476494B04C1 /* Pods_FetchTweetsUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EE23EC0FBE8C66104C02C9D /* Pods_FetchTweetsUITests.framework */; };
-		B4D225F39AD5AC42485C31E2 /* Pods_FetchTweets.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EAC374A854647B81128C30C /* Pods_FetchTweets.framework */; };
 		C9138147201314AE0062B6A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9138146201314AE0062B6A5 /* AppDelegate.m */; };
-		C913814A201314AE0062B6A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9138149201314AE0062B6A5 /* ViewController.m */; };
 		C913814D201314AE0062B6A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C913814B201314AE0062B6A5 /* Main.storyboard */; };
 		C9138150201314AE0062B6A5 /* FetchTweets.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C913814E201314AE0062B6A5 /* FetchTweets.xcdatamodeld */; };
 		C9138152201314AE0062B6A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9138151201314AE0062B6A5 /* Assets.xcassets */; };
@@ -66,8 +64,6 @@
 		C9138142201314AE0062B6A5 /* FetchTweets.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FetchTweets.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9138145201314AE0062B6A5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C9138146201314AE0062B6A5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		C9138148201314AE0062B6A5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		C9138149201314AE0062B6A5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		C913814C201314AE0062B6A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C913814F201314AE0062B6A5 /* FetchTweets.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FetchTweets.xcdatamodel; sourceTree = "<group>"; };
 		C9138151201314AE0062B6A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,7 +115,6 @@
 				C9AFCED0201DF34E000DEB96 /* Social.framework in Frameworks */,
 				C9AFCECE201DF348000DEB96 /* Accounts.framework in Frameworks */,
 				C982E355201322FC00A5E44E /* SafariServices.framework in Frameworks */,
-				B4D225F39AD5AC42485C31E2 /* Pods_FetchTweets.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,8 +280,6 @@
 		C982E361201338F300A5E44E /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				C9138148201314AE0062B6A5 /* ViewController.h */,
-				C9138149201314AE0062B6A5 /* ViewController.m */,
 				C982E3642013401A00A5E44E /* TweetsTableViewController.h */,
 				C982E3652013401A00A5E44E /* TweetsTableViewController.m */,
 				C982E3672013407F00A5E44E /* ToptweetsTableViewController.h */,
@@ -590,7 +583,6 @@
 				C9138150201314AE0062B6A5 /* FetchTweets.xcdatamodeld in Sources */,
 				C982E3692013407F00A5E44E /* ToptweetsTableViewController.m in Sources */,
 				C95580B8201EC394004780C8 /* NSDictionary+NullCheck.m in Sources */,
-				C913814A201314AE0062B6A5 /* ViewController.m in Sources */,
 				C95580BC201EC401004780C8 /* TweetsNetworkServices.m in Sources */,
 				C982E3662013401A00A5E44E /* TweetsTableViewController.m in Sources */,
 				C9138158201314AE0062B6A5 /* main.m in Sources */,

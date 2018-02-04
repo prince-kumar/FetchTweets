@@ -80,14 +80,13 @@ static NSString * const reuseIdentifier = @"TweetsCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self fetchData];
+//    [self fetchData];
     [self loadTweets];
     [self.navigationController.navigationBar
-     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    [self.tableView registerClass:[TweetsCell class] forCellReuseIdentifier:reuseIdentifier];
-    [self.tableView registerNib:[UINib nibWithNibName:@"TweetsCell" bundle:nil] forCellReuseIdentifier:reuseIdentifier];
-    self.navigationItem.title = @"JIO";
-    
+     setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor orangeColor]}];
+//    [self.tableView registerClass:[TweetsCell class] forCellReuseIdentifier:reuseIdentifier];
+//    [self.tableView registerNib:[UINib nibWithNibName:@"TweetsCell" bundle:nil] forCellReuseIdentifier:reuseIdentifier];
+       self.navigationItem.title = @"JIO";
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
@@ -117,6 +116,8 @@ static NSString * const reuseIdentifier = @"TweetsCell";
                                                                                                     options:kNilOptions
                                                                                                       error:&error];
                                                 _tweetsArr  = [[NSArray alloc] initWithObjects:json[@"tweet"], nil];
+                                               TweetsModel *model = [[TweetsModel alloc] init];
+                                               [_tweetsArr arrayByAddingObject:model];
 
                                                NSLog(@"%@", json);
 
@@ -127,10 +128,14 @@ static NSString * const reuseIdentifier = @"TweetsCell";
 }
 
 -(void) loadTweets{
+//    TWTRAPIClient *client = [[TWTRAPIClient alloc] init];
+//    [client loadTweetWithID:@"20" completion:^(TWTRTweet *tweet, NSError *error) {
+//        // handle the response or error
+//    }];
+    
     TWTRAPIClient *client = [[TWTRAPIClient alloc] init];
-    [client loadTweetWithID:@"20" completion:^(TWTRTweet *tweet, NSError *error) {
-        // handle the response or error
-    }];
+    self.dataSource = [[TWTRUserTimelineDataSource alloc] initWithScreenName:@"jio_money" APIClient:client];
+    
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -144,39 +149,39 @@ static NSString * const reuseIdentifier = @"TweetsCell";
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
+//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+//    return 1;
+//}
+//
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+//    if (_tweetsArr.count >1 ) {
+//        return  _tweetsArr.count;
+//    }
+//
+//    return 1;
+//}
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (_tweetsArr.count >1 ) {
-        return  _tweetsArr.count;
-    }
-    
-    return 1;
-}
-
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    TweetsCell *cell =  (TweetsCell *)[tableView dequeueReusableCellWithIdentifier:@"TweetsCell"];
-    
-    
-    // Configure the cell...
-    
-    cell.delegate= self;
-    
-    if (!cell) {
-        
-        cell  =  [TweetsCell loadFromNib];
-        
-    }
-    
-    cell.model = [self.tweetsArr objectAtIndex:indexPath.row];
-    
-    return cell;
-
-}
+//
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    
+//    TweetsCell *cell =  (TweetsCell *)[tableView dequeueReusableCellWithIdentifier:@"TweetsCell"];
+//    
+//    
+//    // Configure the cell...
+//    
+//    cell.delegate= self;
+//    
+//    if (!cell) {
+//        
+//        cell  =  [TweetsCell loadFromNib];
+//        
+//    }
+//    
+//    cell.model = [self.tweetsArr objectAtIndex:indexPath.row];
+//    
+//    return cell;
+//
+//}
 
 
 /*

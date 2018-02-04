@@ -22,9 +22,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-
     [[Twitter sharedInstance] startWithConsumerKey:@"F0uEKLdtHTOpiGHY2yeyNpqIO" consumerSecret:@"s5tkSfxWrvOIyPLfrOMEqaria2OQ48ovg4mITutfoWbab9ehGh"];
-//
+
     
     return YES;
 }

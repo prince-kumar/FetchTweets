@@ -11,6 +11,7 @@
 @implementation CreateAPIString
 
 //https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name=twitterapi&count=2
+//https://api.twitter.com/1.1/trends/place.json?id=1
 
 NSString *baseUrl = @"https://stream.twitter.com";
 
@@ -31,6 +32,7 @@ NSString *baseUrl = @"https://stream.twitter.com";
 }
 
 + (NSString*) returnTrendsURL {
-    return [NSString stringWithFormat:@"@%@/%@", baseUrl, @"trends/available.json"];
+//    return [NSString stringWithFormat:@"@%@/%@", baseUrl, @"trends/available.json"];
+    return @"https://api.twitter.com/1.1/trends/place.json?id=1";
 }
 @end
